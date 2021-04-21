@@ -96,6 +96,7 @@ Examples
 
     //if a user wants to set a particular setting
     if (cli.flags.setting) {
+        if (cli.flags.setting == '*') { return await get_settings(true) }
         let newSetting = await setting_prompt(cli.flags.setting);
         config.set(`settings.${cli.flags.setting}`, newSetting);
     }
