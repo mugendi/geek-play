@@ -4,7 +4,8 @@
 
 const Conf = require('conf'),
     meow = require('meow'),
-    figlet = require('figlet');
+    figlet = require('figlet'),
+    clear = require('clear');
 
 
 /*-------------------------------------------------------------------------------------------------------------------
@@ -12,7 +13,7 @@ const Conf = require('conf'),
 //-------------------------------------------------------------------------------------------------------------------*/
 
 const config = new Conf(),
-    { get_settings, setting_prompt, accepted_settings } = require('../lib/cli-prompts');
+    { get_settings, setting_prompt, accepted_settings, compulsorySettings } = require('../lib/cli-prompts');
 
 
 process.env.YTDL_NO_UPDATE = true;
@@ -68,6 +69,19 @@ Examples
 });
 
 
+async function get_set_settings(settingsArr = []) {
+
+    // get settings
+    let newSettings = await get_settings(settingsArr);
+
+    // set any new settings
+    if (newSettings) {
+        for (let key in newSettings) {
+            config.set(`settings.${key}`, newSettings[key]);
+        }
+    }
+
+}
 
 // get/set settings
 (async() => {
@@ -84,27 +98,33 @@ Examples
 
     // get any missing settings. 
     // usually runs the first time app starts
-    let newSettings = await get_settings();
+    await get_set_settings();
 
-    // set any new settings
-    if (newSettings) {
-        for (let key in newSettings) {
-            config.set(`settings.${key}`, newSettings[key]);
+
+    let appSettings = config.get('settings') || {};
+
+    // Force vlc setup
+    if (appSettings.player == 'vlc' && !appSettings.vlc) {
+        // ensure vlc
+        await get_set_settings(['vlc']);
+    }
+
+
+    //if a user wants to set a particular setting
+    if (cli.flags.setting) {
+        if (cli.flags.setting == '*') {
+            await get_set_settings(compulsorySettings)
+        } else {
+            await get_set_settings([cli.flags.setting]);
         }
 
     }
 
-    //if a user wants to set a particular setting
-    if (cli.flags.setting) {
-        if (cli.flags.setting == '*') { return await get_settings(true) }
-        let newSetting = await setting_prompt(cli.flags.setting);
-        config.set(`settings.${cli.flags.setting}`, newSetting);
-    }
 
-
-    let appSettings = config.get('settings') || {},
-        cliInput = cli.input.join(' '),
+    let cliInput = cli.input.join(' '),
         cliFlags = cli.flags;
+    // update settings 
+    appSettings = config.get('settings') || {}
 
 
     if (appSettings) {
@@ -160,3 +180,29 @@ Brought to you with ♥ from Anthony Mugendi <https://github.com/mugendi>
     });
 
 }
+
+
+process.stdin.resume(); //so the program will not close instantly
+
+function exitHandler(options, exitCode) {
+
+    if (options.cleanup) {
+        // clear console
+        clear();
+    }
+    if (exitCode || exitCode === 0)
+        if (options.exit) process.exit();
+}
+
+//do something when app is closing
+process.on('exit', exitHandler.bind(null, { cleanup: true }));
+
+//catches ctrl+c event
+process.on('SIGINT', exitHandler.bind(null, { exit: true }));
+
+// catches "kill pid" (for example: nodemon restart)
+process.on('SIGUSR1', exitHandler.bind(null, { exit: true }));
+process.on('SIGUSR2', exitHandler.bind(null, { exit: true }));
+
+//catches uncaught exceptions
+process.on('uncaughtException', exitHandler.bind(null, { exit: true }));
