@@ -21,6 +21,8 @@ function start(cliInput, cliFlags, appSettings) {
         // determine type of input
         if (isUrl(cliInput)) {
             // use playlist
+            let action = platformActions[appSettings.platforms.default];
+            action.playlist(cliInput, cliFlags, appSettings)
         } else {
             // use search
             let action = platformActions[appSettings.platforms.default];
