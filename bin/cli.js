@@ -18,8 +18,6 @@ const config = new Conf(),
 process.env.YTDL_NO_UPDATE = true;
 
 
-
-
 const cli = meow(`
 Usage
   $ geekplay <input>
@@ -66,6 +64,7 @@ Examples
             alias: "n"
         },
     }
+
 });
 
 
@@ -154,7 +153,7 @@ Brought to you with ♥ from Anthony Mugendi <https://github.com/mugendi>
         setTimeout(() => {
             // clear();
             resolve();
-        }, 5000);
+        }, 10000);
 
 
     });
