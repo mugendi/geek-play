@@ -3,7 +3,8 @@
 //-------------------------------------------------------------------------------------------------------------------*/
 
 const Conf = require('conf'),
-    meow = require('meow');
+    meow = require('meow'),
+    figlet = require('figlet');
 
 
 /*-------------------------------------------------------------------------------------------------------------------
@@ -72,6 +73,8 @@ Examples
 // get/set settings
 (async() => {
 
+    await identity();
+
     // set default platform.
     // config.delete('settings');
     // later will be moved to cli options
@@ -94,7 +97,6 @@ Examples
 
     //if a user wants to set a particular setting
     if (cli.flags.setting) {
-        console.log('sssss', cli.flags.setting);
         let newSetting = await setting_prompt(cli.flags.setting);
         config.set(`settings.${cli.flags.setting}`, newSetting);
     }
@@ -111,3 +113,50 @@ Examples
 
 
 })()
+
+function identity(params) {
+
+    let welcomeShown = config.get('settings');
+
+    if (welcomeShown) return;
+
+    return new Promise(async(resolve, reject) => {
+
+        console.log(welcomeShown);
+
+
+
+        let logo = await new Promise((resolve, reject) => {
+            figlet(' GeekPlay', function(err, data) {
+                if (err) return reject(null)
+                resolve(data)
+            })
+        });
+
+        console.log(
+            `${logo} simple, elegant, works.                                
+                                                                                                
+Queued 19 Tracks > Playtime: 1 hour 26 minutes 53 seconds                               
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓      
+┃                                                                                ┃      
+┃  Track: 1/19 [>] Enjoy your music as you code!                                 ┃      
+┃  [■■                   8.3%] 03:11 | 160kbps | 3.34MB | 80.2m YT Views         ┃      
+┃  ----------------------------------------------------------------------------  ┃      
+┃                              > Next: Remember to push your code to Github!     ┃      
+┃                                                                                ┃      
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛      
+
+Brought to you with ♥ from Anthony Mugendi <https://github.com/mugendi>
+    
+    `)
+
+
+        setTimeout(() => {
+            // clear();
+            resolve();
+        }, 5000);
+
+
+    });
+
+}
