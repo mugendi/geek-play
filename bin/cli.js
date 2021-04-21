@@ -14,6 +14,8 @@ const config = new Conf(),
     { get_settings, setting_prompt, accepted_settings } = require('../lib/cli-prompts');
 
 
+process.env.YTDL_NO_UPDATE = true;
+
 
 const cli = meow(`
 Usage
