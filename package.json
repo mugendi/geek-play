@@ -16,6 +16,7 @@
         "clear": "^0.1.0",
         "conf": "^10.0.0",
         "dot-prop": "^6.0.1",
+        "download": "^8.0.0",
         "enquirer": "^2.3.6",
         "eventemitter3": "^4.0.7",
         "execa": "^5.0.0",
@@ -40,6 +41,7 @@
         "upath": "^2.0.1",
         "vlc-client": "^1.0.6",
         "vlc-command": "^1.2.0",
+        "which": "^2.0.2",
         "ytdl-core": "^4.5.0",
         "ytpl": "^2.1.1",
         "ytsr": "^3.4.1"

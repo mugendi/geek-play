@@ -13,7 +13,8 @@ const Conf = require('conf'),
 //-------------------------------------------------------------------------------------------------------------------*/
 
 const config = new Conf(),
-    { get_settings, setting_prompt, accepted_settings, compulsorySettings } = require('../lib/cli-prompts');
+    { get_settings, setting_prompt, accepted_settings, compulsorySettings } = require('../lib/cli-prompts'),
+    { download_ffplay } = require("../lib/setup")
 
 
 process.env.YTDL_NO_UPDATE = true;
@@ -83,10 +84,20 @@ async function get_set_settings(settingsArr = []) {
 
 }
 
+
 // get/set settings
 (async() => {
 
     await identity();
+
+
+    // config.delete('ffplay-path');
+    // setup things
+    // do we have ffplay?
+    if (!config.get('ffplay-path')) {
+        await download_ffplay();
+    }
+    // console.log(config.get('ffplay-path'));
 
     // set default platform.
     // config.delete('settings');
@@ -124,10 +135,13 @@ async function get_set_settings(settingsArr = []) {
     let cliInput = cli.input.join(' '),
         cliFlags = cli.flags;
     // update settings 
-    appSettings = config.get('settings') || {}
+    appSettings = config.get('settings') || {};
+
+    let c = figlet.textSync(' GeekPlay')
 
 
     if (appSettings) {
+        if (!cliInput) console.log(`>> Nothing more to do here! Bye!`);
         require('../')(cliInput, cliFlags, appSettings);
     }
 
@@ -142,19 +156,8 @@ function identity(params) {
 
     return new Promise(async(resolve, reject) => {
 
-        console.log(welcomeShown);
-
-
-
-        let logo = await new Promise((resolve, reject) => {
-            figlet(' GeekPlay', function(err, data) {
-                if (err) return reject(null)
-                resolve(data)
-            })
-        });
-
         console.log(
-            `${logo} simple, elegant, works.                                
+            `${figlet.textSync(' GeekPlay')} simple, elegant, works.                                
                                                                                                 
 Queued 19 Tracks > Playtime: 1 hour 26 minutes 53 seconds                               
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓      
@@ -172,9 +175,9 @@ Brought to you with ♥ from Anthony Mugendi <https://github.com/mugendi>
 
 
         setTimeout(() => {
-            // clear();
+            clear();
             resolve();
-        }, 10000);
+        }, 5000);
 
 
     });
@@ -182,27 +185,28 @@ Brought to you with ♥ from Anthony Mugendi <https://github.com/mugendi>
 }
 
 
-process.stdin.resume(); //so the program will not close instantly
+// Handle process exit
+// process.stdin.resume(); //so the program will not close instantly
 
-function exitHandler(options, exitCode) {
+// function exitHandler(options, exitCode) {
 
-    if (options.cleanup) {
-        // clear console
-        clear();
-    }
-    if (exitCode || exitCode === 0)
-        if (options.exit) process.exit();
-}
+//     if (options.cleanup) {
+//         // clear console
+//         clear();
+//     }
+//     if (exitCode || exitCode === 0)
+//         if (options.exit) process.exit();
+// }
 
-//do something when app is closing
-process.on('exit', exitHandler.bind(null, { cleanup: true }));
+// //do something when app is closing
+// process.on('exit', exitHandler.bind(null, { cleanup: true }));
 
-//catches ctrl+c event
-process.on('SIGINT', exitHandler.bind(null, { exit: true }));
+// //catches ctrl+c event
+// process.on('SIGINT', exitHandler.bind(null, { exit: true }));
 
-// catches "kill pid" (for example: nodemon restart)
-process.on('SIGUSR1', exitHandler.bind(null, { exit: true }));
-process.on('SIGUSR2', exitHandler.bind(null, { exit: true }));
+// // catches "kill pid" (for example: nodemon restart)
+// process.on('SIGUSR1', exitHandler.bind(null, { exit: true }));
+// process.on('SIGUSR2', exitHandler.bind(null, { exit: true }));
 
-//catches uncaught exceptions
-process.on('uncaughtException', exitHandler.bind(null, { exit: true }));
+// //catches uncaught exceptions
+// process.on('uncaughtException', exitHandler.bind(null, { exit: true }));
