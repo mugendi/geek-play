@@ -5,7 +5,8 @@
 const Conf = require('conf'),
     meow = require('meow'),
     figlet = require('figlet'),
-    clear = require('clear');
+    clear = require('clear'),
+    c = require('ansi-colors');
 
 
 /*-------------------------------------------------------------------------------------------------------------------
@@ -22,22 +23,32 @@ process.env.YTDL_NO_UPDATE = true;
 
 const cli = meow(`
 Usage
-  $ geekplay <input>
+  $ geekplay <input> <options>
 
 Options
-    --setting         Setting to edit. Accepts "${accepted_settings()}" 
-    --vlc             Play using VLC. Defaults to inbuilt mp3. 
+    ${c.yellow('App Settings:')} 
+        --setting         Edit App settings 
+            vlc           Edit VLC settings
+            playback      Edit playback settings
+            player        Edit MP3 player settings
+            storage       Edit cache and playlist directory settings
+            *             Edit all playback, storage and player settings
+    
+    ${c.yellow('Playback Options:')}
+        --vlc             Play using VLC
+        --play            Start playing (default true)
+        --shuffle         Shuffle tracks (default false)
+        --loop            Loop Playlist (default false)
 
-    --name            Playlist Name. Defaults to playlist ID or search Query
-    --save            Save Playlist. Default is true. 
-    --no-save         Do not save playlist.
+    ${c.yellow('Playlist Options:')}
+        --name            Playlist Name (default, playlist ID or search query)
+        --save            Save Playlist (default true) 
+        --no-save         Do not save playlist 
 
-    --play            Start playing. Default is true;
-    --shuffle         Shuffle Tracks. Default is false.  
-    --loop            Loop Playlist. Default is false.
 
-Examples
-  $ geekplay eminem --rainbow --mp3
+Example:
+   $ geekplay eminem --loop --shuffle
+   ${c.gray.italic('Searches for Eminem tracks, plays them in shuffled order and repeats entire playlist')}
  
 `, {
     flags: {
@@ -131,6 +142,20 @@ async function get_set_settings(settingsArr = []) {
     if (cli.flags.setting) {
         if (cli.flags.setting == '*') {
             await get_set_settings(compulsorySettings)
+        }
+        // seting help
+        else if ('help') {
+            console.log(`\nUsage:\n     --setting  <value> \n\n` +
+
+
+
+                `Example:\n     $ geekplay --setting playback\n` +
+
+                c.gray.italic(`     Edit the playback settings \n` +
+                    `     Possible values include:` +
+                    ` ${accepted_settings()}\n`)
+
+            );
         } else {
             await get_set_settings([cli.flags.setting]);
         }
@@ -142,8 +167,6 @@ async function get_set_settings(settingsArr = []) {
         cliFlags = cli.flags;
     // update settings 
     appSettings = config.get('settings') || {};
-
-    let c = figlet.textSync(' GeekPlay')
 
 
     if (appSettings) {
