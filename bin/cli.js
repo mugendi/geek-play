@@ -144,7 +144,7 @@ async function get_set_settings(settingsArr = []) {
             await get_set_settings(compulsorySettings)
         }
         // seting help
-        else if ('help') {
+        else if (cli.flags.setting == 'help') {
             console.log(`\nUsage:\n     --setting  <value> \n\n` +
 
 
