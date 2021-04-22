@@ -46,5 +46,8 @@
         "ytdl-core": "^4.5.0",
         "ytpl": "^2.1.1",
         "ytsr": "^3.4.1"
+    },
+    "devDependencies": {
+        "wtfnode": "^0.8.4"
     }
 }

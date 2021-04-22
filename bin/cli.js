@@ -25,14 +25,16 @@ Usage
   $ geekplay <input>
 
 Options
-    --setting         Setting to edit. Accepts "${accepted_settings()}"
-    --shuffle         Shuffle videos pay order from that of search results or playlist.    
+    --setting         Setting to edit. Accepts "${accepted_settings()}" 
+    --vlc             Play using VLC. Defaults to inbuilt mp3. 
+
     --name            Playlist Name. Defaults to playlist ID or search Query
     --save            Save Playlist. Default is true. 
-    --play            Start playing. Default is true;
-    --vlc             Play using VLC. Defaults to inbuilt mp3. 
-    
     --no-save         Do not save playlist.
+
+    --play            Start playing. Default is true;
+    --shuffle         Shuffle Tracks. Default is false.  
+    --loop            Loop Playlist. Default is false.
 
 Examples
   $ geekplay eminem --rainbow --mp3
@@ -44,6 +46,10 @@ Examples
             alias: 's'
         },
         shuffle: {
+            type: "boolean",
+            default: false
+        },
+        loop: {
             type: "boolean",
             default: false
         },
@@ -157,11 +163,9 @@ function identity(params) {
     return new Promise(async(resolve, reject) => {
 
         console.log(
-            `${figlet.textSync(' GeekPlay')} simple, elegant, works.   
-            
-Brought to you with ♥ from Anthony Mugendi <https://github.com/mugendi>
-    
-    `)
+            `${figlet.textSync(' GeekPlay')} simple, elegant, works.` +
+            `Brought to you with ♥ from Anthony Mugendi <https://github.com/mugendi>`
+        )
 
 
         setTimeout(() => {
