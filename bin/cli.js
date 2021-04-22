@@ -157,18 +157,8 @@ function identity(params) {
     return new Promise(async(resolve, reject) => {
 
         console.log(
-            `${figlet.textSync(' GeekPlay')} simple, elegant, works.                                
-                                                                                                
-Queued 19 Tracks > Playtime: 1 hour 26 minutes 53 seconds                               
-┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓      
-┃                                                                                ┃      
-┃  Track: 1/19 [>] Enjoy your music as you code!                                 ┃      
-┃  [■■                   8.3%] 03:11 | 160kbps | 3.34MB | 80.2m YT Views         ┃      
-┃  ----------------------------------------------------------------------------  ┃      
-┃                              > Next: Remember to push your code to Github!     ┃      
-┃                                                                                ┃      
-┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛      
-
+            `${figlet.textSync(' GeekPlay')} simple, elegant, works.   
+            
 Brought to you with ♥ from Anthony Mugendi <https://github.com/mugendi>
     
     `)
