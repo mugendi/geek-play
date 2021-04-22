@@ -6,7 +6,8 @@ const Conf = require('conf'),
     meow = require('meow'),
     figlet = require('figlet'),
     clear = require('clear'),
-    c = require('ansi-colors');
+    c = require('ansi-colors'),
+    isOnline = require('is-online');
 
 
 /*-------------------------------------------------------------------------------------------------------------------
@@ -104,6 +105,12 @@ async function get_set_settings(settingsArr = []) {
 
 // get/set settings
 (async() => {
+
+    if (!await isOnline()) {
+        console.log(c.red.bold(">> We seem to have no Internet Connection..."));
+        console.log(`>> Nothing more to do here! Bye!`);
+        return;
+    }
 
     await identity();
 
