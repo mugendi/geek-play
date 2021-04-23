@@ -149,11 +149,14 @@ async function get_set_settings(settingsArr = []) {
     //if a user wants to set a particular setting
     if (cli.flags.setting) {
 
-        if (cli.flags.setting == '*') {
+        let setting = cli.flags.setting.toLowerCase()
+
+        if (setting == 'all') {
             await get_set_settings(compulsorySettings)
         }
         // seting help
-        else if (cli.flags.setting == 'help') {
+        else if (setting == 'help') {
+
             console.log(`\nUsage:\n     --setting  <value> \n\n` +
 
                 `Example:\n     $ geekplay --setting playback\n` +
