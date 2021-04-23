@@ -98,7 +98,8 @@ async function get_set_settings(settingsArr = []) {
     // set any new settings
     if (newSettings) {
         for (let key in newSettings) {
-            config.set(`settings.${key}`, newSettings[key]);
+            if (newSettings[key])
+                config.set(`settings.${key}`, newSettings[key]);
         }
     }
 
@@ -146,17 +147,15 @@ async function get_set_settings(settingsArr = []) {
         await get_set_settings(['vlc']);
     }
 
-
     //if a user wants to set a particular setting
     if (cli.flags.setting) {
+
         if (cli.flags.setting == '*') {
             await get_set_settings(compulsorySettings)
         }
         // seting help
         else if (cli.flags.setting == 'help') {
             console.log(`\nUsage:\n     --setting  <value> \n\n` +
-
-
 
                 `Example:\n     $ geekplay --setting playback\n` +
 
@@ -166,6 +165,7 @@ async function get_set_settings(settingsArr = []) {
 
             );
         } else {
+            // console.log('ssss', cli.flags.setting);
             await get_set_settings([cli.flags.setting]);
         }
 
