@@ -7,6 +7,8 @@ const Conf = require('conf'),
     figlet = require('figlet'),
     clear = require('clear'),
     c = require('ansi-colors'),
+    ospath = require('ospath'),
+    path = require('path'),
     isOnline = require('is-online');
 
 
@@ -109,6 +111,10 @@ async function get_set_settings(settingsArr = []) {
 // get/set settings
 (async() => {
 
+
+    // set default platform.
+    // config.delete('settings');
+
     if (!await isOnline()) {
         console.log(c.red.bold(">> We seem to have no Internet Connection..."));
         console.log(`>> Nothing more to do here! Bye!`);
@@ -116,7 +122,6 @@ async function get_set_settings(settingsArr = []) {
     }
 
     await identity();
-
 
     // config.delete('ffplay-path');
     // setup things
@@ -126,17 +131,10 @@ async function get_set_settings(settingsArr = []) {
     }
     // console.log(config.get('ffplay-path'));
 
-    // set default platform.
-    // config.delete('settings');
-    // later will be moved to cli options
-    config.set('settings.platforms', {
-        available: ['youtube'],
-        default: 'youtube'
-    })
 
     // get any missing settings. 
     // usually runs the first time app starts
-    await get_set_settings();
+    // await get_set_settings();
 
 
     let appSettings = config.get('settings') || {};
@@ -147,6 +145,7 @@ async function get_set_settings(settingsArr = []) {
         await get_set_settings(['vlc']);
     }
 
+    // console.log('setting', cli.flags.setting);
     //if a user wants to set a particular setting
     if (cli.flags.setting) {
 
@@ -165,7 +164,6 @@ async function get_set_settings(settingsArr = []) {
 
             );
         } else {
-            // console.log('ssss', cli.flags.setting);
             await get_set_settings([cli.flags.setting]);
         }
 
@@ -175,7 +173,7 @@ async function get_set_settings(settingsArr = []) {
     let cliInput = cli.input.join(' '),
         cliFlags = cli.flags;
     // update settings 
-    appSettings = config.get('settings') || {};
+    appSettings = config.get('settings');
 
 
     if (appSettings) {
@@ -192,10 +190,38 @@ function identity(params) {
 
     if (welcomeShown) return;
 
+    // set defaults
+
+    // later will be moved to cli options
+    let defaultSettings = {
+        storage: {
+            playlist: path.join(ospath.desktop(), 'geekplay'),
+            // 3 days
+            cache: 3 * 24 * 3600 * 1000
+        },
+        playback: {
+            addToPlaylist: 'yes',
+            continueLastSession: 'yes',
+            volume: 75,
+            limit: 200,
+            // 3 hrs
+            maxDuration: 3 * 3600 * 1000,
+            timeout: 20000
+        },
+        player: 'gk-mp3',
+        platforms: {
+            available: ['youtube'],
+            default: 'youtube'
+        }
+    }
+
+    config.set('settings', defaultSettings)
+
+
     return new Promise(async(resolve, reject) => {
 
         console.log(
-            `${figlet.textSync(' GeekPlay')} simple, elegant, works.` +
+            `${figlet.textSync(' GeekPlay')} simple, elegant, works.\n\n` +
             `Brought to you with ♥ from Anthony Mugendi <https://github.com/mugendi>`
         )
 

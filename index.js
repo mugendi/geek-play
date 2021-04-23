@@ -13,7 +13,7 @@ const platformActions = require('./lib/platforms')
 
 
 function start(cliInput, cliFlags, appSettings) {
-    // console.log(appSettings.platforms.default);
+    // console.log(appSettings);
 
     if (cliInput.trim().length) {
 
