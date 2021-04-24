@@ -1538,6 +1538,11 @@ nth-check@^2.0.0:
   dependencies:
     boolbase "^1.0.0"
 
+ntsuspend@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/ntsuspend/-/ntsuspend-1.0.1.tgz#8f74e0fabae0e490b6576bcbeb1ae4e240cbf629"
+  integrity sha512-bjbjfpE3Fz7fsX177YCm2u5jZh69qBkzp8iJ9WSeZ6uyUCMTQLMR3mUThBmKDJmFhh6Xjuw+d1FXrGJ7n1H8qQ==
+
 numbro@^2.3.2:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/numbro/-/numbro-2.3.2.tgz#4967c631b0ea99b17dd7f88cdd1eaa4ace4d4971"
@@ -1790,6 +1795,13 @@ process-nextick-args@~2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/process-nextick-args/-/process-nextick-args-2.0.1.tgz#7820d9b16120cc55ca9ae7792680ae7dba6d7fe2"
   integrity sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==
+
+process-suspend@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/process-suspend/-/process-suspend-0.0.2.tgz#02950ae352e6ac3ea3f2c9b34c82ccd889f0f12a"
+  integrity sha512-1MzZyHSRs5Rdf9feGdkqZ7ftNMmTNumQAp6J5YESCXVLocDnvvz0fhfRT0TkjvRyDGVseX9h3rFKFiQq+VR1lQ==
+  dependencies:
+    ntsuspend "^1.0.1"
 
 public-ip@^4.0.2:
   version "4.0.3"
