@@ -25,6 +25,7 @@
         "figlet": "^1.5.0",
         "filenamify": "^4.2.0",
         "fs-extra": "^9.1.0",
+        "got": "^11.8.2",
         "is-online": "^9.0.0",
         "is-url": "^1.2.4",
         "joi": "^17.4.0",
@@ -33,8 +34,8 @@
         "lodash": "^4.17.21",
         "log-update": "^4.0.0",
         "m3u": "^0.0.2",
+        "m3u8stream": "^0.8.3",
         "meow": "^9.0.0",
-        "miniget": "^4.2.0",
         "moment": "^2.29.1",
         "numbro": "^2.3.2",
         "open": "^8.0.6",
@@ -45,10 +46,7 @@
         "upath": "^2.0.1",
         "vlc-client": "^1.0.6",
         "vlc-command": "^1.2.0",
-        "which": "^2.0.2",
-        "ytdl-core": "^4.5.0",
-        "ytpl": "^2.1.1",
-        "ytsr": "^3.4.1"
+        "which": "^2.0.2"
     },
     "devDependencies": {
         "wtfnode": "^0.8.4"
