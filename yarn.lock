@@ -1277,6 +1277,11 @@ jsonfile@^6.0.1:
   optionalDependencies:
     graceful-fs "^4.1.6"
 
+keypress@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/keypress/-/keypress-0.2.1.tgz#1e80454250018dbad4c3fe94497d6e67b6269c77"
+  integrity sha1-HoBFQlABjbrUw/6USX1uZ7YmnHc=
+
 keyv@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/keyv/-/keyv-3.0.0.tgz#44923ba39e68b12a7cec7df6c3268c031f2ef373"
