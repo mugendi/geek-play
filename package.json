@@ -9,7 +9,6 @@
     "author": "Anthony Mugendi",
     "license": "MIT",
     "dependencies": {
-        "ansi-colors": "^4.1.1",
         "arrify": "^2.0.1",
         "beeper": "^2.1.0",
         "bytes": "^3.1.0",
@@ -18,7 +17,6 @@
         "conf": "^10.0.0",
         "dot-prop": "^6.0.1",
         "download": "^8.0.0",
-        "enquirer": "^2.3.6",
         "eventemitter3": "^4.0.7",
         "execa": "^5.0.0",
         "fast-glob": "^3.2.5",
@@ -31,6 +29,7 @@
         "joi": "^17.4.0",
         "keypress": "^0.2.1",
         "kind-of": "^6.0.3",
+        "kleur": "^4.1.4",
         "lodash": "^4.17.21",
         "log-update": "^4.0.0",
         "m3u": "^0.0.2",
@@ -42,14 +41,17 @@
         "ospath": "^1.2.2",
         "parse-duration": "^1.0.0",
         "pretty-ms": "^7.0.1",
-        "process-suspend": "^0.0.2",
+        "process-suspend": "^0.0.3",
+        "prompts": "^2.4.1",
         "tildify": "^2.0.0",
         "upath": "^2.0.1",
+        "update-notifier": "^5.1.0",
         "vlc-client": "^1.0.6",
         "vlc-command": "^1.2.0",
         "which": "^2.0.2"
     },
     "devDependencies": {
+        "clear-module": "^4.1.1",
         "wtfnode": "^0.8.4"
     }
 }

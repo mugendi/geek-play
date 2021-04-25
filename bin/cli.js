@@ -6,10 +6,11 @@ const Conf = require('conf'),
     meow = require('meow'),
     figlet = require('figlet'),
     clear = require('clear'),
-    c = require('ansi-colors'),
     ospath = require('ospath'),
     path = require('path'),
-    isOnline = require('is-online');
+    kleur = require('kleur'),
+    isOnline = require('is-online'),
+    updateNotifier = require('update-notifier');
 
 
 /*-------------------------------------------------------------------------------------------------------------------
@@ -17,35 +18,30 @@ const Conf = require('conf'),
 //-------------------------------------------------------------------------------------------------------------------*/
 
 const config = new Conf(),
-    { get_settings, setting_prompt, accepted_settings, compulsorySettings } = require('../lib/cli-prompts'),
+    // { get_settings, setting_prompt, accepted_settings, compulsorySettings } = require('../lib/cli-prompts'),
     { download_ffplay } = require("../lib/setup")
 
 
+// no updates for YTDL
 process.env.YTDL_NO_UPDATE = true;
 
-
-
+// update notifier
+const pkg = require('../package.json');
+updateNotifier({ pkg }).notify();
 
 const cli = meow(`
 Usage
   $ geekplay <input> <options>
 
 Options
-    ${c.yellow('App Settings:')} 
-        --setting         Edit App settings 
-            vlc           Edit VLC settings
-            playback      Edit playback settings
-            player        Edit MP3 player settings
-            storage       Edit cache and playlist directory settings
-            *             Edit all playback, storage and player settings
-    
-    ${c.yellow('Playback Options:')}
+
+    ${kleur.yellow('Playback Options:')}
         --vlc             Play using VLC
         --play            Start playing (default true)
         --shuffle         Shuffle tracks (default false)
         --loop            Loop Playlist (default false)
 
-    ${c.yellow('Playlist Options:')}
+    ${kleur.yellow('Playlist Options:')}
         --name            Playlist Name (default, playlist ID or search query)
         --save            Save Playlist (default true) 
         --no-save         Do not save playlist 
@@ -53,7 +49,7 @@ Options
 
 Example:
    $ geekplay eminem --loop --shuffle
-   ${c.gray.italic('Searches for Eminem tracks, plays them in shuffled order and repeats entire playlist')}
+   ${kleur.gray().italic('Searches for Eminem tracks, plays them in shuffled order and repeats entire playlist')}
  
 `, {
     flags: {
@@ -95,7 +91,7 @@ Example:
 async function get_set_settings(settingsArr = []) {
 
     // get settings
-    let newSettings = await get_settings(settingsArr);
+    // let newSettings = await get_settings(settingsArr);
 
     // set any new settings
     if (newSettings) {
@@ -116,7 +112,7 @@ async function get_set_settings(settingsArr = []) {
     // config.delete('settings');
 
     if (!await isOnline()) {
-        console.log(c.red.bold(">> We seem to have no Internet Connection..."));
+        console.log(kleur.red().bold(">> We seem to have no Internet Connection..."));
         console.log(`>> Nothing more to do here! Bye!`);
         return;
     }
@@ -138,40 +134,6 @@ async function get_set_settings(settingsArr = []) {
 
 
     let appSettings = config.get('settings') || {};
-
-    // Force vlc setup
-    if (appSettings.player == 'vlc' && !appSettings.vlc) {
-        // ensure vlc
-        await get_set_settings(['vlc']);
-    }
-
-    // console.log('setting', cli.flags.setting);
-    //if a user wants to set a particular setting
-    if (cli.flags.setting) {
-
-        let setting = cli.flags.setting.toLowerCase()
-
-        if (setting == 'all') {
-            await get_set_settings(compulsorySettings)
-        }
-        // seting help
-        else if (setting == 'help') {
-
-            console.log(`\nUsage:\n     --setting  <value> \n\n` +
-
-                `Example:\n     $ geekplay --setting playback\n` +
-
-                c.gray.italic(`     Edit the playback settings \n` +
-                    `     Possible values include:` +
-                    ` ${accepted_settings()}\n`)
-
-            );
-        } else {
-            await get_set_settings([cli.flags.setting]);
-        }
-
-    }
-
 
     let cliInput = cli.input.join(' '),
         cliFlags = cli.flags;
