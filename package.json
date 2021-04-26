@@ -1,12 +1,12 @@
 {
     "name": "geekplay",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "The CLI player for the geek in you!",
     "main": "index.js",
     "bin": {
         "geekplay": "bin/cli.js"
     },
-    "author": "Anthony Mugendi",
+    "author": "Anthony Mugendi <ngurumugz@gmail.com>",
     "license": "MIT",
     "dependencies": {
         "arrify": "^2.0.1",
@@ -40,11 +40,37 @@
         "ospath": "^1.2.2",
         "parse-duration": "^1.0.0",
         "pretty-ms": "^7.0.1",
+        "process-suspend": "^0.0.5",
         "prompts": "^2.4.1",
         "tildify": "^2.0.0",
         "upath": "^2.0.1",
         "update-notifier": "^5.1.0",
         "which": "^2.0.2"
     },
-    "devDependencies": {}
+    "devDependencies": {},
+    "directories": {
+        "doc": "docs",
+        "lib": "lib",
+        "test": "test"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mugendi/geek-play.git"
+    },
+    "bugs": {
+        "url": "https://github.com/mugendi/geek-play/issues"
+    },
+    "homepage": "https://github.com/mugendi/geek-play#readme",
+    "keywords": [
+        "player",
+        "music",
+        "youtube",
+        "audio",
+        "streaming",
+        "mp3",
+        "cli"
+    ]
 }
