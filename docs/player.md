@@ -13,4 +13,4 @@ The player will fetch the tracks, and queue them for playback.
 
 ![Player Image](./assets/1.png)
 
-Next >> [Playback](./playback)
+Next >> [Playback](./playback.md)
