@@ -5,7 +5,7 @@
   | |  _ / _ \/ _ \ |/ / |_) | |/ _` | | | |
   | |_| |  __/  __/   <|  __/| | (_| | |_| |
    \____|\___|\___|_|\_\_|   |_|\__,_|\__, |
-                                      |___/  because Geeks too enjoy good music!
+                                      |___/  because Geeks ❤ good music!
 
 ```
 
@@ -32,7 +32,7 @@ Install **GeekPlay** globally with ```npm install -g GeekPlay```.
 
 To play your music, simply send the command: ```GeekPlay edm``` if you love EDM music like I do.
 
-![Sample Animation](./docs/assets/animation.gif)
+![Sample Animation](https://github.com/mugendi/geek-play/raw/master/docs/assets/animation.gif)
 
 Under the hood, **GeekPlay** will search YouTube for "EDM" or whatever other term you give it and start streaming those tracks as audio in your CLI.
 
