@@ -36,7 +36,7 @@ To play your music, simply send the command: ```GeekPlay edm``` if you love EDM 
 
 Under the hood, **GeekPlay** will search YouTube for "EDM" or whatever other term you give it and start streaming those tracks as audio in your CLI.
 
-For advanced usage, please read the [Player Documentation](./docs/commands).
+For advanced usage, please read the [Player Documentation](./docs/player).
 
 
 
