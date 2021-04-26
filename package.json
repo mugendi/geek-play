@@ -40,7 +40,6 @@
         "ospath": "^1.2.2",
         "parse-duration": "^1.0.0",
         "pretty-ms": "^7.0.1",
-        "process-suspend": "^0.0.4",
         "prompts": "^2.4.1",
         "tildify": "^2.0.0",
         "upath": "^2.0.1",
