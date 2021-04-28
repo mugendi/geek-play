@@ -24,7 +24,7 @@ If not, then here is your opportunity, because Geek Player is a NodeJs Module.
 Essentially the player uses *FFMPEG's*, *FFPLAY* to play/stream audio. So if you have that installed, that's awesome. If not, the a version compatible with your system (Windows, MacOS or Linux) will be automatically downloaded and used.
 
 ## Getting started
-Install **GeekPlay** globally with ```npm install -g GeekPlay```.
+Install **GeekPlay** globally with ```npm install -g geekplay```.
 
 **NOTE:** I have heard that complaints that there are issues installing this with  ```yarn add --global```. So please use ```npm``` for now.
 
