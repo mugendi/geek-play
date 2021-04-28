@@ -11,8 +11,7 @@ const Conf = require('conf'),
     ospath = require('ospath'),
     path = require('path'),
     kleur = require('kleur'),
-    isOnline = require('is-online'),
-    updateNotifier = require('update-notifier');
+    isOnline = require('is-online');
 
 
 /*-------------------------------------------------------------------------------------------------------------------
@@ -26,10 +25,6 @@ const config = new Conf(),
 
 // no updates for YTDL
 process.env.YTDL_NO_UPDATE = true;
-
-// update notifier
-const pkg = require('../package.json');
-updateNotifier({ pkg }).notify();
 
 const cli = meow(`
 Usage
