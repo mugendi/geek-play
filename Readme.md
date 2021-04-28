@@ -5,9 +5,13 @@
   | |  _ / _ \/ _ \ |/ / |_) | |/ _` | | | |
   | |_| |  __/  __/   <|  __/| | (_| | |_| |
    \____|\___|\___|_|\_\_|   |_|\__,_|\__, |
-                                      |___/  because Geeks ❤ good music!
+                                      |___/  
+    because Geeks ❤ good music!
 
 ```
+
+[![github-stars](https://img.shields.io/github/stars/mugendi/geek-play?style=social&logo=github)](https://github.com/mugendi/geek-play)
+[![github-license](https://img.shields.io/github/license/mugendi/geek-play?style=social&logo=github)](https://github.com/mugendi/geek-play)
 
 
 # What is Geek Player

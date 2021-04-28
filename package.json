@@ -1,6 +1,6 @@
 {
     "name": "geekplay",
-    "version": "0.0.8",
+    "version": "0.0.9",
     "description": "The CLI player for the geek in you!",
     "main": "index.js",
     "bin": {
