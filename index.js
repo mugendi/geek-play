@@ -2,7 +2,9 @@
     Modules
 //-------------------------------------------------------------------------------------------------------------------*/
 
-const isUrl = require('is-url')
+const isUrl = require('is-url'),
+    EventEmitter = require('eventemitter3'),
+    EE = new EventEmitter();
 
 /*-------------------------------------------------------------------------------------------------------------------
     Local
@@ -22,11 +24,11 @@ function start(cliInput, cliFlags, appSettings) {
         if (isUrl(cliInput)) {
             // use playlist
             let action = platformActions[appSettings.platforms.default];
-            action.playlist(cliInput, cliFlags, appSettings)
+            action.playlist(cliInput, cliFlags, appSettings, EE)
         } else {
             // use search
             let action = platformActions[appSettings.platforms.default];
-            action.search(cliInput, cliFlags, appSettings)
+            action.search(cliInput, cliFlags, appSettings, EE)
         }
 
     }

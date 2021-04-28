@@ -20,8 +20,8 @@ const Conf = require('conf'),
 //-------------------------------------------------------------------------------------------------------------------*/
 
 const config = new Conf(),
-    // { get_settings, setting_prompt, accepted_settings, compulsorySettings } = require('../lib/cli-prompts'),
     { download_ffplay } = require("../lib/setup")
+    // const logger = require('../lib/logger')
 
 
 // no updates for YTDL
