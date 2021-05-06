@@ -33,5 +33,5 @@ On Sunday, 2nd May, 2021, Joseph passed on. This is his Eulogy.
 >
 >Thank you for all the memories, rest in perfect peace Jose.
 >
->***~ Kimberly***
+> **~ Kimberly**
 
