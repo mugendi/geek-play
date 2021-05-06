@@ -30,7 +30,8 @@ On Sunday, 2nd May, 2021, Joseph passed on. This is his Eulogy.
 #
 >
 >![photo_2021-05-06_22-37-16](https://user-images.githubusercontent.com/5348246/117355788-aaa52880-aebb-11eb-939e-03654abd1184.jpg)
+>
 >Thank you for all the memories, rest in perfect peace Jose.
 >
-> ***~ Kimberly***
+>***~ Kimberly***
 
