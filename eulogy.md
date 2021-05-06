@@ -30,7 +30,7 @@ On Sunday, 2nd May, 2021, Joseph passed on. This is his Eulogy.
 >
 > Without you in my life, there will always be a huge, empty spot where your love and laughter used to reside. 
 >
->Thank you for who you were with me and who you I was when I was with you.
+>Thank you for who you were with me and who I was when I was with you. 
 >
 >I will count the days until I can see you again, my love.
 >
