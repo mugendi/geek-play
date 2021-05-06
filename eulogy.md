@@ -52,5 +52,17 @@ On Sunday, 2nd May, 2021, Joseph passed on. This is his Eulogy.
 >
 >~ **Joyce aka LEGGIT girl ;)**
 
+#
+
+> Joseph,
+>
+> *`Jose`* that's what most of us used to call you, you inspired me to program, to work hard and most of all to stay focused. 
+>
+>I remember when you created *`bubblews scrapper`* and most of us subscribed to this service so that we could earn an extra coin in campus.
+>
+> I miss the days when we used to hangout together at Ihub, NaiLab and YMCA.
+>
+> *Until we meet again, Rest in peace buddy. ~ **Hamfri***
+
 
 
