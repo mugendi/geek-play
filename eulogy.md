@@ -30,7 +30,7 @@ On Sunday, 2nd May, 2021, Joseph passed on. This is his Eulogy.
 >
 >Thank you for all the memories, rest in perfect peace Jose.
 >
-> *~ **Kimberly***
+> ~ **Kimberly**
 
 # 
 
@@ -50,7 +50,7 @@ On Sunday, 2nd May, 2021, Joseph passed on. This is his Eulogy.
 >
 >Repose en paix Jose et que les coeurs de tous tes proches soient apaisés.
 >
->*~ **Joyce aka LEGGIT girl ;)****
+>~ **Joyce aka LEGGIT girl ;)**
 
 
 
