@@ -24,14 +24,33 @@ On Sunday, 2nd May, 2021, Joseph passed on. This is his Eulogy.
 >
 >*Fare thee well! ~ **Anthony***
 
-
-
-
 #
 >
 >![photo_2021-05-06_22-37-16](https://user-images.githubusercontent.com/5348246/117355788-aaa52880-aebb-11eb-939e-03654abd1184.jpg)
 >
 >Thank you for all the memories, rest in perfect peace Jose.
 >
-> **~ Kimberly**
+> *~ **Kimberly***
+
+# 
+
+>Jose was one of the first friends I made when I arrived in Kenya in 2018.
+>
+>From the first time we met (a Sauti sol concert), he was immediately super friendly!
+>
+>You could say that music and going out was the catalyst for our friendship :D
+>
+>He also made me discover Nairobi, his favorite places and even organized my first trip outside the capital with other friends.
+>
+>Jose was incredible, his joie de vivre, his smile, his love of adventure, his open-mindedness, his welcoming and kind side, his passion for coding and photography, and his famous Gwara Gwara! I used to make fun of him for that (he would do it on every and any songs lol), but also for his pronounced taste for house music that I hated. 
+>
+>Now I'll only think of him when I listen to Kygo and others.
+> 
+>Jose was amazing and he'll be missed. 
+>
+>Repose en paix Jose et que les coeurs de tous tes proches soient apaisés.
+>
+>*~ **Joyce aka LEGGIT girl ;)****
+
+
 
