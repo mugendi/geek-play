@@ -10,7 +10,7 @@ On Sunday, 2nd May, 2021, Joseph passed on. This is his Eulogy.
 
 >Joseph, 
 >
->I've known you since your campus days when we yourself, Areba and I won the first ever civic Hackathon in Nyeri with our innovation, [QuickHealth](https://africancoder.wordpress.com/2014/11/02/nyeri-civic-hack-2014/).
+>I've known you since your campus days when we yourself, [Areba](https://github.com/theareba) and I won the first ever civic Hackathon in Nyeri with our innovation, [QuickHealth](https://africancoder.wordpress.com/2014/11/02/nyeri-civic-hack-2014/).
 >
 >Over the years I've known you in many ways, and I  will forever remember you.
 >
