@@ -18,11 +18,12 @@ On Sunday, 2nd May, 2021, Joseph passed on. This is his Eulogy.
 <!-- > ![docs](./docs/eulogy/jose-debug.jpg) -->
 
 <video controls width="600">
-    <source src="./docs/eulogy/jose-music.mp4"
+    <source src="https://user-images.githubusercontent.com/5348246/117344036-a07c2d80-aead-11eb-800a-0a7aabed039b.mp4"
             type="video/mp4">
-
     Sorry, your browser doesn't support embedded videos.
 </video>
+
+
 
 
 >I know you loved your job and every project you took was a passionate undertaking and your genius shone through. I know this because you helped me debug and perfect Geek Play even though it was never a project that would make any of us a dime.
