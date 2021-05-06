@@ -22,4 +22,14 @@ On Sunday, 2nd May, 2021, Joseph passed on. This is his Eulogy.
 >
 >I know you loved life. I know you were a true friend, a great mind and gifted Rubyist. I know that you will be missed for all your goodness and beautiful memories. I know that the world lost a great talent and your contributions to the tech world will never be fully realized. You thought big,  a dreamer who left too soon. 
 >
->*Fare thee well! ~ Anthony*
+>*Fare thee well! ~ **Anthony***
+
+#
+
+> Jowse,
+>
+> Without you in my life, there will always be a huge, empty spot where your love and laughter used to reside. Thank you for who you were with me and who you I was when I was with you.
+>
+>I will count the days until I can see you again, my love.
+>
+> ~ ***Mya***
