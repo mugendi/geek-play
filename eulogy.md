@@ -24,14 +24,13 @@ On Sunday, 2nd May, 2021, Joseph passed on. This is his Eulogy.
 >
 >*Fare thee well! ~ **Anthony***
 
-#
 
-> Jowse,
+
+
+#
 >
-> Without you in my life, there will always be a huge, empty spot where your love and laughter used to reside. 
+>![photo_2021-05-06_22-37-16](https://user-images.githubusercontent.com/5348246/117355788-aaa52880-aebb-11eb-939e-03654abd1184.jpg)
+>Thank you for all the memories, rest in perfect peace Jose.
 >
->Thank you for who you were with me and who I was when I was with you. 
->
->I will count the days until I can see you again, my love.
->
-> ~ ***Mya***
+> ***~ Kimberly***
+
