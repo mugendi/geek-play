@@ -15,17 +15,7 @@ On Sunday, 2nd May, 2021, Joseph passed on. This is his Eulogy.
 >Over the years I've known you in many ways, and I  will forever remember you.
 >
 >I know you loved the song "I'll Wait" by Kygo and Sasha Sloan. I know you loved your music. I know you loved your code. I know so because you often shared clips of you bumping to Kygo as you helped me test Geekplay. I know because it was you who challenged me to build a CLI player because you wanted to listen to your favourite music as you code. 
-<!-- > ![docs](./docs/eulogy/jose-debug.jpg) -->
-
-<video controls width="600">
-    <source src="https://user-images.githubusercontent.com/5348246/117344036-a07c2d80-aead-11eb-800a-0a7aabed039b.mp4"
-            type="video/mp4">
-    Sorry, your browser doesn't support embedded videos.
-</video>
-
-
-
-
+>
 >I know you loved your job and every project you took was a passionate undertaking and your genius shone through. I know this because you helped me debug and perfect Geek Play even though it was never a project that would make any of us a dime.
 >
 >I know you worked till late night because the geek in you, the perfectionist in you wouldn't let you sleep till the divs aligned perfectly on whatever html page you were working on. I saw this first hand as we shared about some of your recent pet projects such as https://plagdetector.com and more recently http://eazzybnb.com which you never got to finish 😭
