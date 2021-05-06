@@ -1,6 +1,6 @@
 # Eulogizing a champ!
 
-When this small project started. Joseph Ndung'u was the one of the first people to test it and play with GeekPlayer. In fact, he was the main motivation. This was simply a quick overnight hack for me and was then known as [YT-VLC](https://bitbucket.org/mugendi/yt-vlc/src). 
+When this small project started. [Joseph Ndung'u](https://github.com/joseph-n) was the one of the first people to test it and play with GeekPlayer. In fact, he was the main motivation. This was simply a quick overnight hack for me and was then known as [YT-VLC](https://bitbucket.org/mugendi/yt-vlc/src). 
 
 He loved it and encouraged me to build it as a CLI only player. He was my brainstorm partner and beta tester number one.
 
