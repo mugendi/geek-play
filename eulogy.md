@@ -67,8 +67,9 @@ On Sunday, 2nd May, 2021, Joseph passed on. This is his Eulogy.
 #
 
 > ![e6e4257f-93bb-4ebc-84cc-60ed5ecf7ab9](https://user-images.githubusercontent.com/5348246/117530641-e7217300-afe6-11eb-999b-1bfbc4b14683.jpg)
-> Jose, you were a true friend and an inspiration to me. Rest peacefully.
-> ~ **Bernard**
+> Jose, you were a true friend and an inspiration to me. 
+>
+> *Rest peacefully! ~ **Bernard***
 
 #
 
