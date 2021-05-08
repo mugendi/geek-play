@@ -106,7 +106,7 @@ On Sunday, 2nd May, 2021, Joseph passed on. This is his Eulogy.
 #
 
 ## Get to know Joseph Ndung'u 
-- [Intro.avi](https://drive.google.com/file/d/15VXsztnQsfcLmgNBVuREgE32HTPBHWet/view)
+- [Intro](https://drive.google.com/file/d/15VXsztnQsfcLmgNBVuREgE32HTPBHWet/view)
 - [A life well lived](https://drive.google.com/file/d/14YFbqY52yzPyWe227CkzerVWWx10WaE_/view?usp=drivesdk)
 - [In loving Memory](https://drive.google.com/file/d/14ejE359vrT75WGEPFCEkbG9FLqo74hei/view)
 - [Such a lively soul](https://drive.google.com/file/d/14fCbRGbCgiOFyoQeQBc2gUl_7z7aKlbe/view)
